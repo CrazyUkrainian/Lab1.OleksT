@@ -1,3 +1,4 @@
+// fred
 package csd230.lab1.OleksandrTerekhov.entities;
 
 import jakarta.persistence.*;
