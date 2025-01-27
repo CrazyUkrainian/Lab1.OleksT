@@ -12,7 +12,7 @@ public class DiscMagEntity extends MagazineEntity {
     @Column(name = "has_disc", nullable = true)
     private boolean hasDisc;
 
-    @Column(name = "order_qty", nullable = false)
+    @Column(name = "order_qty", nullable = true)
     private int orderQty;
 
     @Column(name = "curr_issue")
@@ -44,69 +44,4 @@ public class DiscMagEntity extends MagazineEntity {
     public void setHasDisc(boolean hasDisc) {
         this.hasDisc = hasDisc;
     }
-
-    public int getOrderQty() {
-        return orderQty;
-    }
-
-    public void setOrderQty(int orderQty) {
-        this.orderQty = orderQty;
-    }
-
-    public Date getCurrIssue() {
-        return currIssue;
-    }
-
-    public void setCurrIssue(Date currIssue) {
-        this.currIssue = currIssue;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getCopies() {
-        return copies;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public CartEntity getCart() {
-        return cart;
-    }
-
-    public void setCart(CartEntity cart) {
-        this.cart = cart;
-    }
-
 }

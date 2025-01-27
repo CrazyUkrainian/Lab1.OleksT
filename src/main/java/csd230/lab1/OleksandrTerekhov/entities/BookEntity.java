@@ -33,12 +33,5 @@ public class BookEntity extends PublicationEntity {
         this.ISBN = ISBN;
     }
 
-    public CartEntity getCart() {
-        return cart;
-    }
-
-    public void setCart(CartEntity cart) {
-        this.cart = cart;
-    }
 
 }

@@ -42,36 +42,5 @@ public class PublicationEntity extends CartItemEntity {
         this.copies = copies;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public CartEntity getCart() {
-        return cart;
-    }
-
-    public void setCart(CartEntity cart) {
-        this.cart = cart;
-    }
 
 }

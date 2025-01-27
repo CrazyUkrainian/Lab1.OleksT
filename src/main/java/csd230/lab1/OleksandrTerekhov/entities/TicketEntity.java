@@ -10,14 +10,7 @@ public class TicketEntity extends CartItemEntity {
     @Column(name = "text")
     private String text;
 
-    @Column(name = "price", nullable = false)
-    private double price;
 
-    @Column(name = "quantity", nullable = false)
-    private int quantity;
-
-    @Column(name = "description")
-    private String description;
 
     @ManyToOne
     @JoinColumn
@@ -29,30 +22,6 @@ public class TicketEntity extends CartItemEntity {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public CartEntity getCart() {

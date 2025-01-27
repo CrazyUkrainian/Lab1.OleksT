@@ -14,11 +14,6 @@ public class CartEntity {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @Column(name = "status", nullable = false)
-    private String status;
-
-    @Column(name = "created_date", nullable = false)
-    private LocalDate createdDate;
 
     public Long getId() {
         return id;
@@ -36,19 +31,4 @@ public class CartEntity {
         this.userId = userId;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public LocalDate getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(LocalDate createdDate) {
-        this.createdDate = createdDate;
-    }
 }

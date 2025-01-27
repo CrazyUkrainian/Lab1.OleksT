@@ -1,11 +1,12 @@
-// fred
 package csd230.lab1.OleksandrTerekhov.entities;
 
+import csd230.lab1.OleksandrTerekhov.entities.CartEntity;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cart_item_entity")
 public class CartItemEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
@@ -17,6 +18,12 @@ public class CartItemEntity {
     @Column(name = "quantity", nullable = false)
     private int quantity;
 
+    @Column(name = "order_qty", nullable = false)
+    private int orderQty = 1;
+
+    @Column(name = "copies", nullable = false)
+    private int copies = 1; // Default value
+
     @Column(name = "description")
     private String description;
 
@@ -24,6 +31,14 @@ public class CartItemEntity {
     @JoinColumn
     private CartEntity cart;
 
+    @PrePersist
+    protected void onCreate() {
+        if (copies <= 0) {
+            copies = 1; // Ensure default value if not set
+        }
+    }
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -48,6 +63,22 @@ public class CartItemEntity {
         this.quantity = quantity;
     }
 
+    public int getOrderQty() {
+        return orderQty;
+    }
+
+    public void setOrderQty(int orderQty) {
+        this.orderQty = orderQty;
+    }
+
+    public int getCopies() {
+        return copies;
+    }
+
+    public void setCopies(int copies) {
+        this.copies = copies;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -63,5 +94,4 @@ public class CartItemEntity {
     public void setCart(CartEntity cart) {
         this.cart = cart;
     }
-
 }
