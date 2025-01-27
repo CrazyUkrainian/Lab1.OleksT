@@ -13,21 +13,6 @@ public class BookEntity extends PublicationEntity {
     @Column(name = "isbn")
     private String ISBN;
 
-    @Column(name = "title")
-    private String title;
-
-    @Column(name = "copies", nullable = false)
-    private int copies;
-
-    @Column(name = "price", nullable = false)
-    private double price;
-
-    @Column(name = "quantity", nullable = false)
-    private int quantity;
-
-    @Column(name = "description")
-    private String description;
-
     @ManyToOne
     @JoinColumn
     private CartEntity cart;
@@ -46,46 +31,6 @@ public class BookEntity extends PublicationEntity {
 
     public void setISBN(String ISBN) {
         this.ISBN = ISBN;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getCopies() {
-        return copies;
-    }
-
-    public void setCopies(int copies) {
-        this.copies = copies;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public CartEntity getCart() {

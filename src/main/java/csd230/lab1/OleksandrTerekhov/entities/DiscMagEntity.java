@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 public class DiscMagEntity extends MagazineEntity {
-    @Column(name = "has_disc", nullable = false)
+    @Column(name = "has_disc", nullable = true)
     private boolean hasDisc;
 
     @Column(name = "order_qty", nullable = false)

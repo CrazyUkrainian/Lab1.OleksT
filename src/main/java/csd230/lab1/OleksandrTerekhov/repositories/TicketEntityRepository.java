@@ -6,16 +6,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface TicketEntityRepository extends JpaRepository<TicketEntity, Long> {
-
-    // Find ticket by ID
-    TicketEntity findById(long id);
-
-    // Find tickets by event name (partial match)
-    List<TicketEntity> findByEventNameContainingIgnoreCase(String eventName);
-
-    // Find tickets within a specific price range
-    List<TicketEntity> findByPriceBetween(double minPrice, double maxPrice);
-
-    // Find tickets by event date
-    List<TicketEntity> findByEventDate(java.time.LocalDate eventDate);
+//
+//    // Find ticket by ID
+//    TicketEntity findById(long id);
+//
+//    // Find tickets by event name (partial match)
+//    List<TicketEntity> findByEventNameContainingIgnoreCase(String eventName);
+//
+//    // Find tickets within a specific price range
+//    List<TicketEntity> findByPriceBetween(double minPrice, double maxPrice);
+//
+//    // Find tickets by event date
+//    List<TicketEntity> findByEventDate(java.time.LocalDate eventDate);
 }
