@@ -1,5 +1,5 @@
 # see https://hub.docker.com/_/mysql for environment variables
-# note changes port to 3307
+
 services:
   mysql:
     container_name: 'csd230'
